@@ -38,6 +38,9 @@ q1_2016_w=q1_2016(4:87,2);
 q1_2017_w=q1_2017(2:85,2);
 q1_w=[q1_2014_w,q1_2015_w,q1_2016_w,q1_2017_w];
 for i=1:12
-
+    q1_week(i,:)=sum(q1_w((i-1)*7+1:i*7,:));   
 end
-
+r_q1_week(:,1)=q1_week(:,1)/sum(q1_week(:,1));
+r_q1_week(:,2)=q1_week(:,2)/sum(q1_week(:,2));
+r_q1_week(:,3)=q1_week(:,3)/sum(q1_week(:,3));
+r_q1_week(:,4)=q1_week(:,4)/sum(q1_week(:,4));
